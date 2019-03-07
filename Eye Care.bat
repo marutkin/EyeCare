@@ -1,2 +1,2 @@
-cd EyeCare/
+cd src/
 node index.js
