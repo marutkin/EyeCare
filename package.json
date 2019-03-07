@@ -1,0 +1,19 @@
+{
+  "name": "eyes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint ./EyeCare/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dialog": "^0.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "eslint": "^5.15.1"
+  }
+}
