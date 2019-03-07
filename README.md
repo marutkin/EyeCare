@@ -1,8 +1,6 @@
 # EyeCare
 Simple program for time tracking: Node JavaScript
 
-[![Build Status](https://api.travis-ci.org/glidejs/glide.svg?branch=master)](https://travis-ci.org/glidejs/glide)
-
 ## Getting started
 
 Pull-in a latest version with NPM ...
@@ -18,6 +16,11 @@ Also you can set notification interval, or set it empty to get Infinite interval
 ```JavaScript
 new EyeCare(/* your default value :number */).start();
 ```
+After that you should run in command line
+```JavaScript
+node .src/index.js
+```
+or just run Eye Care.bat
 
 ## Contributing
 
