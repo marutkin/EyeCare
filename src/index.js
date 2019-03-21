@@ -19,7 +19,7 @@ const fs = require("fs");
 const dialog = require("dialog");
 
 const settingsFileName = "settings";
-const settings = fs.readFileSync(${settingsFileName}+"json");
+const settings = fs.readFileSync(`${settingsFileName}.json`);
 const settingsParsed = JSON.parse(settings);
 
 function logWrap() {
