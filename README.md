@@ -8,14 +8,19 @@ Install all dependencies by running `npm install` in project folder.
 ```bash
 npm install
 ```
-If you want custom interval of notification you can configure it here 
+If you want custom interval of notification you can configure it in settings.json.
+
+There is three variant: 'hour', 'minute', 'second'
+Example:
 ```JavaScript
-this.interval = TIME.hour;
+"interval": "hour";
 ```
-Also you can set notification interval, or set it empty to get Infinite interval as default option
+and how many times it shoud notify you, any ```JavaScript int ``` value.
+
 ```JavaScript
-new EyeCare(/* your default value :number */).start();
+"times": "5";
 ```
+
 After that you should run in command line
 ```JavaScript
 node .src/index.js
