@@ -15,7 +15,12 @@
 
 //#region Libraries and helpers
 
+const fs = require("fs");
 const dialog = require("dialog");
+
+const settingsFileName = "settings";
+const settings = fs.readFileSync(${settingsFileName}+"json");
+const settingsParsed = JSON.parse(settings);
 
 function logWrap() {
 
@@ -74,20 +79,24 @@ class TimeOptions {
 
 const TIME = new TimeOptions();
 
+
 //#endregion
 
 //#region Code
 
 class EyeCare {
 
-  constructor(times) {
-    this.print = logWrap();
+  constructor(times, interval) {
+
+    this.interval = TIME[interval];
     this.howManyTimesToShow = times ? times : Infinity;
-    this.interval = TIME.hour;
+
+    this.print = logWrap();
     this.dialogInfoWindow = {
       title: "Eye contact helper",
       message: "It`s time to RELAX!"
     };
+
   }
 
   get index() {
@@ -100,7 +109,10 @@ class EyeCare {
 
   start() {
 
-    this.print(`Eye care track => start!\nDate is: ${ TIME.currentDate }\nTime is: ${ TIME.currentTime }`);
+    this.print(`Eye care track => start!
+    \nDate is: ${ TIME.currentDate }
+    \nTime is: ${ TIME.currentTime }
+    \nYour interval is: ${ TIME.getParsedMillisec(this.interval)}`);
 
     const timeHandler = (exitCode) => {
 
@@ -124,6 +136,6 @@ class EyeCare {
 }
 
 /* ENTRY POINT */
-new EyeCare(5).start();
+new EyeCare(settingsParsed.times, settingsParsed.interval).start();
 
 //#endregion
