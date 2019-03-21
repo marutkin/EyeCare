@@ -10,12 +10,12 @@ npm install
 ```
 If you want custom interval of notification you can configure it in settings.json.
 
-There is three variant: 'hour', 'minute', 'second'
+There is three variant: ``` 'hour', 'minute', 'second' ```
 Example:
 ```JavaScript
 "interval": "hour";
 ```
-and how many times it shoud notify you, any ```JavaScript int ``` value.
+and how many times it shoud notify you, any ``` int ``` value.
 
 ```JavaScript
 "times": "5";
