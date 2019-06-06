@@ -32,7 +32,7 @@ class EyeCare {
     this.print(`Eye care track => start!
     \nDate is: ${ this.time.currentDate }
     \nTime is: ${ this.time.currentTime }
-    \nYour interval is: ${ this.time.getParsedMillisec(this.interval)}`);
+    \nYour interval is: ${ this.time.getParsedMillisec(this.interval)} and times: ${this.howManyTimesToShow}`);
 
     const timeHandler = (exitCode) => {
 
