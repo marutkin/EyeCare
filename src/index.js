@@ -1,15 +1,11 @@
 
 //#region Welcome
 
-/************************************************** 
+/**************************************************
     (*_*) Eye Care (*_*)
-
     V.1.0.0.1
-
     Simple program for time tracking: Node JavaScript
-
     Keep your eyes relaxed
-
 ***************************************************/
 
 //#endregion
