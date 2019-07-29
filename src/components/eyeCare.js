@@ -9,7 +9,7 @@ class EyeCare {
     this.time = new TimeOptions();
 
     this.interval = this.time[interval];
-    this.howManyTimesToShow = times ? times : Infinity;
+    this.howManyTimesToShow = times || Infinity;
 
     this.print = logWrap();
     this.dialogInfoWindow = {
