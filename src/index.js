@@ -1,27 +1,18 @@
 
-//#region Welcome
+/**************************************************
+ (*_*) Eye Care (*_*)
 
-/************************************************** 
-    (*_*) Eye Care (*_*)
+ V.1.0.0.1
 
-    V.1.0.0.1
+ Simple program for time tracking: Node JavaScript
 
-    Simple program for time tracking: Node JavaScript
+ Keep your eyes relaxed
 
-    Keep your eyes relaxed
+ ***************************************************/
 
-***************************************************/
+import timeSettings from "./timesettings.json";
+import EyeCare from "./components/eyeCare";
 
-//#endregion
+const app = new EyeCare(timeSettings.times, timeSettings.interval);
 
-const fs = require("fs");
-const path = require("path");
-const EyeCare = require("./components/eyeCare");
-
-const TIME_SETTING_FILE_NAME = "timesettings";
-
-const timeSettingsPath = path.resolve( __dirname, `${TIME_SETTING_FILE_NAME}.json`);
-const timeSettingsBinary = fs.readFileSync( timeSettingsPath,"utf8");
-const timeSettings = JSON.parse(timeSettingsBinary);
-
-new EyeCare(timeSettings.times, timeSettings.interval).start();
+app.start();

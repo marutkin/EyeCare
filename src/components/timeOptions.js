@@ -15,7 +15,7 @@ class TimeOptions {
     return new Date().toLocaleTimeString();
   }
 
-  getParsedMillisec(millisec) {
+  static getParsedMillisec(millisec) {
 
     let seconds = (millisec / 1000).toFixed(0);
     let minutes = Math.floor(seconds / 60);
@@ -31,7 +31,7 @@ class TimeOptions {
     seconds = Math.floor(seconds % 60);
     seconds = (seconds >= 10) ? seconds : "0" + seconds;
 
-    if (hours != "") {
+    if (hours !== "") {
       return hours + ":" + minutes + ":" + seconds;
     }
 
@@ -41,4 +41,4 @@ class TimeOptions {
 
 }
 
-module.exports = TimeOptions;
+export default TimeOptions;

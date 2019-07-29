@@ -1,6 +1,6 @@
 
-const dialog = require("dialog");
-const TimeOptions = require("./timeOptions");
+import dialog from "dialog";
+import TimeOptions from "./timeOptions";
 
 class EyeCare {
 
@@ -32,13 +32,13 @@ class EyeCare {
     this.print(`Eye care track => start!
     \nDate is: ${ this.time.currentDate }
     \nTime is: ${ this.time.currentTime }
-    \nYour interval is: ${ this.time.getParsedMillisec(this.interval)} and times: ${this.howManyTimesToShow}`);
+    \nYour interval is: ${ TimeOptions.getParsedMillisec(this.interval)} and times: ${this.howManyTimesToShow}`);
 
     const timeHandler = (exitCode) => {
 
       /* Here we will log our state, after user action */
-      if (exitCode == 0)
-        this.print(`You will be notified ${ this.index } times, in ${ this.time.getParsedMillisec(this.interval) } interval. Notification time is: ${ this.time.currentTime }`);
+      if (exitCode === 0)
+        this.print(`You will be notified ${ this.index } times, in ${ TimeOptions.getParsedMillisec(this.interval) } interval. Notification time is: ${ this.time.currentTime }`);
       /* End point, we will return last message and stop the app */
       if (this.howManyTimesToShow <= 0)
         return this.print("Eye care track => stop! All intervals are fired!");
@@ -64,4 +64,4 @@ function logWrap (consoleColor = "\x1b[44m") {
   };
 }
 
-module.exports = EyeCare;
+export default EyeCare;
