@@ -1,11 +1,11 @@
 {
   "name": "eyes",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple program for time tracking: Node JavaScript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint ./src/index.js"
+    "lint": "eslint ./src/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +14,13 @@
   },
   "devDependencies": {
     "eslint": "^5.15.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marutkin/EyeCare.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marutkin/EyeCare/issues"
+  },
+  "homepage": "https://github.com/marutkin/EyeCare#readme"
 }
